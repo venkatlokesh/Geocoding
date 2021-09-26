@@ -1,0 +1,22 @@
+<html>
+<body>
+    <center>
+        <div>
+            <form action="http://localhost:5000/getAddressDetails" method="POST">
+                <label for="address">Enter your postal address</label>
+                <input type="text" name="address" id="address" required autofocus />
+                <label for="output_format">View in</label>
+                <select name="output_format" id="output_format">
+                    <option value="json">json</option>
+                    <option value="xml">xml</option>
+                </select>
+                <input type = "submit" value = "submit" />
+            </form>
+        </div>
+    </center>
+    {% if response %}
+    {{response}}
+    {% endif %}
+</body>
+
+</html>
